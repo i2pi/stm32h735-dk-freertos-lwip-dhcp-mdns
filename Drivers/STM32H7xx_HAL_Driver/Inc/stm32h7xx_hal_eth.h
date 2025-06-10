@@ -423,6 +423,16 @@ typedef struct
   uint8_t
   *MACAddr;                  /*!< MAC Address of used Hardware: must be pointer on an array of 6 bytes */
 
+
+  // JOSH
+  // https://community.st.com/t5/stm32-mcus-products/stm32f207-ethernet-multicast-rx/td-p/404653
+
+  uint8_t  *MACFilter;  /*!< MAC Filter Address: must point to an array of 6 bytes */
+  uint32_t  RxMode;     /*!< Selects the Ethernet Rx mode: Polling or Interrupt.
+                                 This parameter can be a value of @ref ETH_Rx_Mode */
+
+  // END JOSH
+
   ETH_MediaInterfaceTypeDef   MediaInterface;            /*!< Selects the MII interface or the RMII interface. */
 
   ETH_DMADescTypeDef

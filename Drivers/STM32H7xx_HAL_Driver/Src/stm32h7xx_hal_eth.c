@@ -2985,6 +2985,7 @@ static void ETH_MACDMAConfig(ETH_HandleTypeDef *heth)
 
   /* DMA default configuration */
   ETH_SetDMAConfig(heth, &dmaDefaultConf);
+
 }
 
 /**

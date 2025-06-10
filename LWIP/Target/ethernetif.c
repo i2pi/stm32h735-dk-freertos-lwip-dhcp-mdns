@@ -378,6 +378,11 @@ static void low_level_init(struct netif *netif)
     netif_set_link_up(netif);
 /* USER CODE BEGIN PHY_POST_CONFIG */
 
+    ETH_MACFilterConfigTypeDef filter;
+    HAL_ETH_GetMACFilterConfig(&heth, &filter);
+    filter.PassAllMulticast = ENABLE;
+    HAL_ETH_SetMACFilterConfig(&heth, &filter);
+
 /* USER CODE END PHY_POST_CONFIG */
     }
 
