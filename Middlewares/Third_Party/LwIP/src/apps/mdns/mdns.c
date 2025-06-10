@@ -1716,7 +1716,7 @@ mdns_handle_question(struct mdns_packet *pkt)
               res = mdns_build_service_domain(&my_ans, service, 1);
               if (res == ERR_OK && mdns_domain_eq(&known_ans, &my_ans)) {
                 LWIP_DEBUGF(MDNS_DEBUG, ("MDNS: Skipping known answer: service name PTR\n"));
-                reply.serv_replies[i] &= ~REPLY_SERVICE_NAME_PTR;
+// reply.serv_replies[i] &= ~REPLY_SERVICE_NAME_PTR;
               }
             }
           }

@@ -113,7 +113,7 @@ void mdns_thread(void *argument) {
   IP4_ADDR(&mdns_group, 224, 0, 0, 251);
   igmp_joingroup(IP_ADDR_ANY, &mdns_group);
 
-  mdns_resp_add_service(&gnetif, "scion", "_scion", DNSSD_PROTO_UDP, 9000, 3600, srv_txt, NULL);
+  mdns_resp_add_service(&gnetif, "scion", "_scion", DNSSD_PROTO_UDP, 9000, 60, srv_txt, NULL);
   mdns_resp_announce(&gnetif);
   UNLOCK_TCPIP_CORE();
 

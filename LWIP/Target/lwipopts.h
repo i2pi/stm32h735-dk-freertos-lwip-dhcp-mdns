@@ -147,7 +147,7 @@
 #define LWIPERF_CHECK_RX_DATA 1
 #define LWIP_NUM_NETIF_CLIENT_DATA  1
 #define MEMP_NUM_UDP_PCB 5
-
+#define LWIP_DEBUG
 
 /* ETH_CODE: macro and prototypes for proper (hopefuly?)
  * multithreading support
